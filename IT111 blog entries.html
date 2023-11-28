@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka Puerto</title>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: rgb(104, 22, 69);
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: white;
+            color: rgb(152, 67, 67);
+        }
+
+        ul li:nth-child(1) a:hover {
+            background-color: white;
+            border-top-color: rgba(143, 69, 69, 0.6);
+            border-bottom-color: rgba(143, 69, 69, 0.6);
+            color: rgb(179, 72, 72);
+        }
+
+        ul li:nth-child(2) a:hover {
+            background-color: lightpink;
+            color: rgb(152, 67, 67);
+        }
+
+        ul li:nth-child(3) a:hover {
+            background-color: white;
+            border-top-color: rgba(143, 69, 69, 0.6);
+            border-bottom-color: rgba(143, 69, 69, 0.6);
+            color: rgb(179, 72, 72);
+        }
+
+        .c-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .c-container div {
+            flex: 1;
+            text-align: center;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .c-container div:hover {
+            background-color: lightpink;
+            color: white;
+        }
+
+        .c-container img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            object-fit: contain;
+            max-height: 300px;
+        }
+
+        .c-container p {
+            color: rgb(104, 22, 69);
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2.5rem;
+            color: rgb(143, 69, 69);
+        }
+
+        footer a {
+            text-decoration: none;
+            padding-inline: 1.25rem;
+            color: rgb(143, 69, 69);
+        }
+
+        footer p {
+            font-weight: 500;
+            cursor: pointer;
+            margin-right: 43%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav__content">
+            <ul>
+                <li><a href="file:///C:/Puerto/index.html">Home</a></li>
+                <li><a href="file:///C:/Puerto/IT111%20blog%20entries.html">IT111 BLOG ENTRIES</a></li>
+                <li><a href="file:///C:/Puerto/flex%20page.html">FLEX PAGE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="c-container">
+
+        <div class="c1">
+            <h3>LESSON 1</h3>
+            <img src="chapter 1.jpg" alt="Lesson 1 Image">
+            <p>Lesson 1 introduces fundamental concepts in computing, covering computer systems, hardware, software,
+                networking, and the societal impact of computing. Students develop foundational skills in problem-solving
+                and logical thinking.</p>
+        </div>
+
+        <div class="c2">
+            <h3>LESSON 2</h3>
+            <img src="chapter 2.jpg" alt="Lesson 2 Image">
+            <p>Lesson 2 explores the workings of computers, problem-solving, and the creation of applications. It offers
+                paths to become a programmer, designing software, or a system analyst, understanding and enhancing
+                computer systems.</p>
+        </div>
+
+        <div class="c3">
+            <h3>LESSON 3</h3>
+            <img src="chapter 3.jpg" alt="Lesson 3 Image">
+            <p>Lesson 3 delves into the information processing cycle, encompassing Input, Processing, Output, and
+                Storage. Computers follow these steps to effectively process data.</p>
+        </div>
+
+        <div class="c4">
+            <h3>LESSON 4</h3>
+            <img src="chapter 4.jpg" alt="Lesson 4 Image">
+            <p>Lesson 4 explores the complexity of a computer system, which includes hardware, software, peopleware, and
+                dataware. It emphasizes processing and managing information effectively.</p>
+        </div>
+
+        <div class="c5">
+            <h3>LESSON 5</h3>
+            <img src="chapter 5.jpg" alt="Lesson 5 Image">
+            <p>Lesson 5 emphasizes computer security, crucial for ensuring the integrity and availability of information
+                in a digital environment. It involves safeguarding systems and data from unauthorized access, damage, or
+                disruption.</p>
+        </div>
+
+        <div class="last">
+            <h3>HTML AND CSS</h3>
+            <img src="chapter 6.jpg" alt="HTML and CSS Image">
+            <p>HTML and CSS, though challenging, form the backbone for creating and styling web pages. HTML structures
+                content, defining elements like headings and paragraphs, while CSS handles presentation and layout. Mastering
+                these fundamental web technologies is essential for creating aesthetically pleasing and well-structured
+                websites.</p>
+        </div>
+    </div>
+
+    <footer>
+        <a href="#">BLOG</a>
+        <p>&copy; Eureka Shekinah 2023.</p>
+    </footer>
+</body>
+
+</html>

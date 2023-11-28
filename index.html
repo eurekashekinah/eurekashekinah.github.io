@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka Puerto</title>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background: transparent;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: rgb(104, 22, 69);
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: white;
+            color: rgb(179, 72, 72);
+        }
+
+        ul li:nth-child(1) a:hover {
+            background-color: white;
+            border-top-color: rgba(143, 69, 69, 0.6);;
+            border-bottom-color: rgba(143, 69, 69, 0.6);
+            color: rgb(179, 72, 72);
+        }
+
+        ul li:nth-child(2) a:hover {
+            background-color: lightpink;
+            color: rgb(179, 72, 72);
+        }
+
+        ul li:nth-child(3) a:hover {
+            background-color: white;
+            border-top-color: rgba(143, 69, 69, 0.6);;
+            border-bottom-color: rgba(143, 69, 69, 0.6);
+            color:rgb(179, 72, 72);
+        }
+
+        .container {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(143, 69, 69, 0.6)), url(eureka\ 6.jpg);
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .final {
+            color: white;
+            padding: 10rem 5rem 0 5rem;
+            font-size: 140px;
+        }
+
+        .name {
+            font-size: 140px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .name span {
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .Me {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #ca8e8e;
+            color: rgba(194, 34, 34, 0.581);
+            display: flex;
+            align-items: center;
+            padding: 9rem 7.5rem;
+            justify-content: space-between;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2%;
+        }
+
+        .socials a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid var(--text-dark);
+            border-radius: 10%;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.784);
+            transition: color 0.5s, background-color 0.5s;
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .socials a:hover {
+            color: rgba(255, 255, 255, 0.6);
+            background-color:rgba(243, 243, 243, 0.599);
+        }
+
+        .socials a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background:rgba(203, 130, 130, 0.177);
+            z-index: -1;
+            transition: width 0.5s;
+        }
+
+        .socials a:hover::before {
+            width: 100%;
+        }
+
+        .Me-left {
+            width: 50ch;
+        }
+
+        .Me p {
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.784);
+            text-align: center; /* Center the text */
+        }
+
+        .Me-img {
+            width: 400px;
+            height: 400px;
+            border-radius: 10%; 
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            margin-left: 0; /* Move the image to the left */
+            margin-right: auto; /* Reset margin-right to auto */
+        }
+
+        .image {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            align-items: center;
+            height: 100%; /* Ensure the container takes full height */
+        }
+
+        .image img {
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+        }
+
+        h3 {
+            font-size: 70px;
+            color: rgba(255, 255, 255, 0.784);
+            text-align: center; /* Center the text */
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2.5rem;
+            color: rgb(143, 69, 69);
+        }
+
+        footer a {
+            text-decoration: none;
+            padding-inline: 1.25rem;
+            color: rgb(143, 69, 69);
+        }
+
+        footer p {
+            font-weight: 500;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav__content">
+            <ul>
+                <li><a href="file:///C:/Puerto/index.html">Home</a></li>
+                <li><a href="file:///C:/Puerto/IT111%20blog%20entries.html">IT111 BLOG ENTRIES</a></li>
+                <li><a href="file:///C:/Puerto/flex%20page.html">FLEX PAGE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="home">
+        <section>
+            <div class="final">
+                <div class="name">IT111<br>
+                    <span>Final Output</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="Me" id="about">
+        <div class="Me-left">
+            <h3>ABOUT ME</h3>
+            <div class="socials">
+                <a href="https://web.facebook.com/ekkaaayyy"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/ekkaaaayyyyy/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://twitter.com/eshekinah9?"><i class='bx bxl-twitter'></i></a>
+            </div>
+
+            <p>
+                Hello! I'm Eureka Shekinah Puerto, 18 years old, residing in Brgy. Extension, Wao, Lanao del Sur.
+                My hobbies include watching movies, playing code, playing tennis, sleeping, and babysitting my cousin.
+            </p>
+        </div>
+
+        <div class="image">
+            <img src="eureka 5.jpg" alt="eureka">
+        </div>
+    </section>
+
+    <div class="video" style="text-align: center;">
+        <h2 style=" color: rgb(143, 69, 69); margin-top: 5%; margin-bottom: 3%;">"WHAT I SEE MYSELF 8 YEARS FROM NOW"</h2>
+        <video src="video.mp4" autoplay controls style="width: 100%; max-width: 900px; height: 400px; margin-bottom: 3%;"></video>
+    </div>
+    <footer>
+        <a href="#">HOME</a>
+        <p style="margin-right: 40%;">&copy; Eureka Shekinah 2023.</p>
+    </footer>
+</body>
+
+</html>

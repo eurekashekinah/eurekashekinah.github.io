@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka Puerto</title>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(rgba(99, 50, 50, 0.49), rgba(215, 188, 188, 0.304));
+            background-position: center;
+        }
+
+        nav {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+        }
+
+        ul li:nth-child(1) a:hover {
+            border-top-color: rgba(143, 69, 69, 0.6);
+            border-bottom-color: rgba(143, 69, 69, 0.6);
+        }
+
+        ul li:nth-child(2) a:hover {
+            background-color: lightpink;
+            color: rgb(152, 67, 67);
+        }
+
+        ul li:nth-child(3) a:hover {
+            border-top-color: rgba(143, 69, 69, 0.6);
+            border-bottom-color: rgba(143, 69, 69, 0.6);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .box {
+            position: relative;
+            width: 480px; 
+            height: 480px; 
+            transition: 0.5s;
+            transform-style: preserve-3d;
+            overflow: hidden;
+            margin-right: 15px;
+            margin-top: 45px;
+        }
+
+        .container:hover .box {
+            transform: rotateY(25deg);
+        }
+
+        .container .box:hover~.box {
+            transform: rotateY(-25deg);
+        }
+
+        .container .box:hover {
+            transform: rotateY(0deg) scale(1.25);
+            z-index: 1;
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .box .imgBx:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(159, 82, 82, 0.722), #000000a2);
+            z-index: 1;
+            opacity: 0;
+            transition: 0.5s;
+            mix-blend-mode: multiply;
+        }
+
+        .container .box:hover .imgBx:before {
+            opacity: 1;
+        }
+
+        .container .box .imgBx img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+
+        .container .box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            align-items: flex-end;
+            box-sizing: border-box;
+        }
+
+        .container .box .content h2 {
+            color: #fff;
+            transition: 0.5s;
+            text-transform: uppercase;
+            margin-top: 15%;
+            margin-bottom: 10px;
+            font-size: 25px;
+            transform: translateY(200px);
+            transition-delay: 0.3s;
+            opacity: 0;
+        }
+
+        .container .box:hover .content h2 {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        .container .box .content p {
+            color: #fff;
+            transition: 0.5s;
+            margin-top: 10%;
+            margin-bottom: 5px;
+            font-size: 15px;
+            transform: translateY(200px);
+            transition-delay: 0.4s;
+            opacity: 0;
+        }
+
+        .container .box:hover .content p {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2.5rem;
+            color: rgb(152, 67, 67);
+        }
+
+        footer p {
+            font-weight: 500;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__content">
+            <ul>
+                <li><a href="file:///C:/Puerto/index.html">Home</a></li>
+                <li><a href="file:///C:/Puerto/IT111%20blog%20entries.html">IT111 BLOG ENTRIES</a></li>
+                <li><a href="file:///C:/Puerto/flex%20page.html">FLEX PAGE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="box">
+            <div class="imgBx">
+                <img src="flex 1.jpg">
+            </div>
+            <div class="content">
+                <div>
+                    <h2>MY MOTHER</h2>
+                    <p>Flexing the phenomenal woman who shaped me into who I am today – my very strong and wonderful mother. Her resilience, 
+                        grace, and unconditional love are my daily reminders of what truly matters. Her love is my anchor, and her strength is my inspiration.
+                        From the smallest gestures of kindness to the immense sacrifices she makes, defines unconditional love. Gratitude doesn't even begin to cover it. 
+                        Super blessed to have her, and I love her so much.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="flex 2.jpg">
+            </div>
+            <div class="content">
+                <div>
+                    <h2>MY BOYFRIEND</h2>
+                    <p>I just want to flex this handsome man named Bricks Jay. He is my best friend, my enemy, my safe place, my home, and my everything.
+                       I'm so grateful to have him; he heals my inner child and makes me feel safe. He is a very good listener and adviser, always there for me.
+                       His kindness, patience, and understanding mean the world to me. He is truly an amazing boyfriend, and I love him so much.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Eureka Shekinah 2023.</p>
+    </footer>
+</body>
+
+</html>
+
